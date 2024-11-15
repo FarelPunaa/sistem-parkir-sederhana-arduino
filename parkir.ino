@@ -6,17 +6,17 @@ Servo servo;
 LiquidCrystal_I2C lcd(0x27, 16, 2); // Alamat I2C LCD dan ukuran 16x2
 
 // Pin definisi
-const int trigPin = 7;
-const int echoPin = 6;
-const int ledRed = 2;
-const int ledGreen = 3;
+const int trigPin = 2;
+const int echoPin = 3;
+const int ledRed = 4;
+const int ledGreen = 5;
 
 // Variabel
 long duration;
 int distance;
 
 void setup() {
-  servo.attach(5);          // Pin kontrol servo
+  servo.attach(8);          // Pin kontrol servo
   lcd.init();               // Inisialisasi LCD
   lcd.backlight();          // Nyalakan lampu latar LCD
   Serial.begin(9600);      // Mulai komunikasi serial
